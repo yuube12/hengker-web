@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang = "id">
+<head>
+  <meta charset = "UTF-8" />
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel = "stylesheet" href = "../../css/index.css">
+  <title>Hengker</title>
+</head>
+<body>
+  <div class = "awalBesar">
+    <div class = "awalGambar">
+      <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWNta3Q5bnc4MXJsa3Jyd240dTZ4OWx5bGd0bnd5MmNsc3I4MXMybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hY2pydU08Jep1kRhc6/giphy.gif">
+    </div>
+    <div class = "awalJudul">
+      <h1>HENGKER</h1>
+    </div>
+  </div>
+
+  <div class="tombolKembali">
+    <a href="../index.html"><p class="kembali">Kembali</a></p>
+    <a href="../../index.html"><p class="home">Home</a></p>
+  </div>
+
+  <main>
+<div class="judulBesar bukanPertama">
+  <h2>🛠️ Network</h2>
+</div>
+
+<div class="judulKecil">
+  <h3>1. NAT (Network Address Translation)</h3>
+</div>
+<div class="teks">
+  <p><b>Penjelasan:</b></p>
+  <ul>
+    <li>VM <b>bisa internetan</b>.</li>
+    <li><b>Terisolasi</b> dari VM lain dan dari jaringan lokal.</li>
+    <li>Tidak bisa di-scan dari luar (kecuali ada port forwarding).</li>
+  </ul>
+  <p><b>Digunakan saat:</b></p>
+  <ul>
+    <li>Install tools, update, browsing.</li>
+    <li>Ingin aman dari luar, dan tidak perlu komunikasi antar VM.</li>
+  </ul>
+  <p><b>Kekurangan:</b> Tidak sepenuhnya anonim. Trafik tetap lewat <b>IP asli host</b> dan ISP tetap bisa melihat.</p>
+</div>
+
+<div class="judulKecil bukanPertama">
+  <h3>2. NAT Network</h3>
+</div>
+<div class="teks">
+  <p><b>Penjelasan:</b></p>
+  <ul>
+    <li>Mirip NAT, tapi <b>antar VM bisa saling terhubung</b>.</li>
+    <li>Masih bisa internetan.</li>
+    <li>Harus setup NAT Network di VirtualBox Preferences.</li>
+  </ul>
+  <p><b>Digunakan saat:</b></p>
+  <ul>
+    <li>Simulasi jaringan lokal antar beberapa VM (attacker & korban).</li>
+    <li>CTF, lab malware multi-host, MITM antar VM.</li>
+  </ul>
+  <p><b>Kekurangan:</b> Masih tidak sepenuhnya anonim ke ISP, kecuali pakai VPN/Tor di dalam VM.</p>
+</div>
+
+<div class="judulKecil bukanPertama">
+  <h3>3. Bridged Adapter</h3>
+</div>
+<div class="teks">
+  <p><b>Penjelasan:</b></p>
+  <ul>
+    <li>VM <b>terhubung langsung ke jaringan fisik</b> seperti komputer biasa.</li>
+    <li>Dapat IP dari router, <b>bisa diakses dari perangkat lain</b>.</li>
+  </ul>
+  <p><b>Digunakan saat:</b></p>
+  <ul>
+    <li>Butuh VM terlihat di jaringan nyata (misal: diserang dari perangkat lain).</li>
+    <li>Pentest target nyata di jaringan lokal.</li>
+  </ul>
+  <p><b>Kekurangan:</b> Paling tidak anonim. VM muncul sebagai perangkat nyata di LAN, mudah dilacak via MAC & IP router.</p>
+</div>
+
+<div class="judulKecil bukanPertama">
+  <h3>4. Not Attached</h3>
+</div>
+<div class="teks">
+  <p><b>Penjelasan:</b></p>
+  <ul>
+    <li>VM <b>tidak punya koneksi jaringan sama sekali</b>.</li>
+    <li>Seperti komputer tanpa LAN/Wi-Fi.</li>
+  </ul>
+  <p><b>Digunakan saat:</b></p>
+  <ul>
+    <li>Latihan pentesting offline.</li>
+    <li><b>Isolasi total</b> (misalnya analisis malware).</li>
+  </ul>
+  <p><b>Kelebihan:</b> Paling anonim, tapi tidak bisa browsing atau akses luar.</p>
+</div>
+
+<div class="teks">
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Mode</th>
+      <th>Internet</th>
+      <th>Antar VM</th>
+      <th>Host ke VM</th>
+      <th>Gunakan Saat</th>
+    </tr>
+    <tr>
+      <td>NAT</td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌*</td>
+      <td>Update, install tools (1 VM)</td>
+    </tr>
+    <tr>
+      <td>NAT Network</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>❌*</td>
+      <td>Lab multi-VM, pentest antar mesin</td>
+    </tr>
+    <tr>
+      <td>Bridged</td>
+      <td>✅</td>
+      <td>✅ (via LAN)</td>
+      <td>✅</td>
+      <td>Lab real network, uji dari luar</td>
+    </tr>
