@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang = "id">
+<head>
+  <meta charset = "UTF-8" />
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel = "stylesheet" href = "../css/index.css">
+  <title>Hengker</title>
+</head>
+<body>
+  <div class = "awalBesar">
+    <div class = "awalGambar">
+      <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWNta3Q5bnc4MXJsa3Jyd240dTZ4OWx5bGd0bnd5MmNsc3I4MXMybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hY2pydU08Jep1kRhc6/giphy.gif">
+    </div>
+    <div class = "awalJudul">
+      <h1>HENGKER</h1>
+    </div>
+  </div>
+
+  <div class="tombolKembali">
+    <a href="../index.html"><p class="kembali">Kembali</a></p>
+    <a href="../index.html"><p class="home">Home</a></p>
+  </div>
+
+  <main>
+    <div class = "judulBesar">
+      <h2>⚠️ Catatan!!</h2>
+    </div>
+    <div class = "judulKecil">
+      <h3>🔌 Aku akan menyarankan untuk memakai USB Wi-Fi adapter</h3>
+    </div>
+    <div class = "teks">
+      <p>Kalian bisa melihat cara menggunakannya di <a href="../materi_lainnya/usb_wifi_adapter.html">SINI.</a> Bisa dicoba tanpa pakai usb wifi adapter, tapi akan sangat berisiko jika terjadi kesalahan internet. Kalian ga mau kan, rumah kalian digedor FBI? ┬┴┬┴┤(･_├┬┴┬┴ </p>
+      <img src="https://www.notion.so/image/https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2Fv1.Y2lkPTc5MGI3NjExY25najVjbWRubHJ6YjRqZnZpa3AxaTlpcGhtYTlnOGl2a2s0d3dzaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw%2FUGBMRe2qFGg3ML0Rvj%2Fgiphy.gif?table=block&id=21217d26-beee-809c-8229-ed498f8d7dba&spaceId=1f537b6d-ffb4-4198-9277-d68bbba50f79&userId=1d4d872b-594c-8107-806e-000218897cba&cache=v2">
+    </div>
+
+    <div class = "judulBesar">
+      <h2>🔽 Menggunakan VPN dengan openvpn</h2>
+    </div>
+    <div class="judulKecil">
+      <h3>📌 Apa Itu OpenVPN?</h3>
+    </div>
+    <div class="teks">
+      <ul>
+        <li>openvpn adalah aplikasi client untuk menjalankan koneksi VPN.</li>
+        <li>Biasanya sudah terinstal di Kali Linux. Cek dengan:</li>
+        <li class="ulTidakAda terminal">openvpn --version</li>
+        <li>Kalau hanya mengetik openvpn, akan muncul manual-nya.</li>
+      </ul>
+      <div class="garisKiri">
+        <p><b>Tapi OpenVPN tidak bisa digunakan langsung, kamu perlu:</b></p>
+        <ul>
+          <li>Konfigurasi file .ovpn dari penyedia VPN (seperti VPNBook)</li>
+          <li>Username dan password (kalau perlu)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>🔧 Langkah-Langkah Menggunakan VPNBook di Kali Linux</h3>
+    </div>
+    <div class="teks">
+      <ol>
+        <li>Kunjungi situs: vpnbook.com</li>
+        <li>Klik tab "Free VPN" di atas</li>
+        <li>Scroll ke bagian "OpenVPN Config Files"</li>
+        <li>Download beberapa file ZIP, misalnya:</li>
+        <ul>
+          <li>vpnbook-us1-tcp80.ovpn.zip</li>
+          <li>vpnbook-ca1-udp25000.ovpn.zip, dll</li>
+        </ul>
+        <p>Karena kadang satu server penuh</p>
+        <li>Ekstrak file ZIP-nya</li>
+        <li>Buka terminal dan masuk ke folder hasil ekstrak:</li>
+        <p class="ulTidakAda terminal">cd ~/Downloads/vpnbook-.../</p>
+        <li>Jalankan file .ovpn</li>
+        <p class="ulTidakAda terminal">sudo openvpn vpnbook-(tulis namanya).ovpn</p>
+        <li>Masukkan username: vpnbook</li>
+        <li>Password bisa kamu lihat di halaman yang sama (bagian bawah). Selalu berubah, jadi harus cek ulang.</li>
+        <li>Jika berhasil, akan muncul:</li>
+        <p class="ulTidakAda terminal">Initialization Sequence Completed</p>
+        <p>Artinya: VPN aktif</p>
+        <li>Kalau tidak bisa, berarti server penuh. Hentikan openvpn dengan: (di terminal lain)</li>
+        <li class="ulTidakAda terminal">sudo pkill openvpn</li>
+        <p>Perintah ini akan mencoba menghentikan semua proses bernama openvpn.</p>
+        <li>Coba hubungkan lagi hingga berhasil.</li>
+        <li>Setelah berhasil, coba akses internet, misalnya buka Google. Jika tidak bisa, lakukan perbaikan DNS.</li>
+      </ol>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>❌ Cara Berhenti dari VPN</h3>
+    </div>
+    <div class="teks">
+      <ul>
+        <li>kan Ctrl + C di terminal tempat VPN berjalan.</li>
+        <li>angsung sudo pkill openvpn kalau tidak bisa ditekan.</li>
+      </ul>
+    </div>
+
+
+    <div class="judulBesar bukanPertama">
+      <h2>♻️ Menggati DNS</h2>
+    </div>
+    <div class="judulKecil">
+      <h3>🔄️ Cara Mengganti DNS di Kali Linux</h3>
+    </div>
+    <div class="teks">
+      <p class="garisKiri">File DNS default adalah /etc/resolv.conf, namun biasanya dilindungi dengan atribut "immutable" agar tidak bisa diubah seenaknya.</p>
+      <ol>
+        <li>Cek status proteksi file:</li>
+        <p class="ulTidakAda terminal">sudo lsattr /etc/resolv.conf</p>
+        <p class="garisKiri">jika ada huruf i, artinya file dikunci</p>
+        <li>Hapus proyeksi</li>
+        <p class="ulTidakAda terminal">sudo chattr -i /etc/resolv.conf</p>
+        <li>Edit file DNS</li>
+        <p class="ulTidakAda terminal">sudo nano /etc/resolv.conf</p>
+        <li>Tambahkan dengan DNS yang kamu pilih</li>
+        <p class="ulTidakAda terminal">nameserver 8.8.8.8       # Google DNS <br> nameserver 8.8.4.4       # Google DNS cadangan <br> nameserver 1.1.1.1       # Cloudflare DNS (lebih aman dan privat)</p>
+        <p>Lalu berikan DNS asli tanpa tanda pagar #</p>
+        <li>Simpan dengan:</li>
+        <ul>
+          <li>Ctrl + O, lalu Enter</li>
+          <li>Ctrl + X, untuk keluar</li>
+        </ul>
+      </ol>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>❗ Peringatan:</h3>
+    </div>
+    <div class="teks">
+      <ul>
+        <li>DNS akan kembali ke asli saat reboot (kecuali kamu ubah permanen).</li>
+      </ul>
+    </div>
+
+
+    <div class="judulBesar bukanPertama">
+      <h2>🧅 Onion Browser</h2>
+    </div>
+    <div class="judulKecil">
+      <h3>⚠️ Harus Pakai VPN, Kenapa?</h3>
+    </div>
+    <div class="teks">
+      <ul>
+        <li>Beberapa ISP memblokir akses ke situs Tor atau mendeteksi lalu lintas Tor.</li>
+        <li>VPN menyamarkan identitasmu sebelum kamu membuka koneksi Tor.</li>
+        <li>Tidak wajib 100%, tapi **sangat disarankan** demi privasi.</li>
+      </ul>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>📥 Langkah-Langkah Instalasi Tor Browser:</h3>
+    </div>
+    <div class="teks">
+      <ol>
+        <li>Aktifkan VPN terlebih dahulu.</li>
+        <li>Buka Firefox (atau browser lain), dan akses situs resmi: https://www.torproject.org</li>
+        <li>Klik tombol Download Tor Browser for Linux.</li>
+        <li>File yang terunduh biasanya berekstensi .tar.xz.</li>
+        <li>Ekstrak file tersebut (klik kanan → Extract Here, atau gunakan terminal: tar -xf [namafile]).</li>
+        <li>Masuk ke folder hasil ekstraksi, biasanya bernama tor-browser_en-US/.</li>
+      </ol>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>▶️ Menjalankan Tor Browser:</h3>
+    </div>
+    <div class="teks">
+      <p><b>Cara 1: GUI (jika berhasil)</b></p>
+      <ol start="7">
+        <li>Double klik file shortcut tor di folder tersebut.</li>
+        <ul>
+          <li>Tapi kemungkinan besar ini tidak akan berhasil.</li>
+        </ul>
+      </ol>
+      <p><b>Cara 2: Terminal (lebih stabil)</b></p>
+      <ol start="8">
+        <li>Buka terminal, masuk ke folder, lalu jalankan:</li>
+        <p class="ulTidakAda terminal">./start-tor-browser.desktop</p>
+      </ol>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>🌐 Mengatur Koneksi (Pertama Kali)</h3>
+    </div>
+    <div class="teks">
+      <ol start="9">
+        <li>Akan muncul dua pilihan: Connect dan Configure.</li>
+        <li>Klik Configure, jika:</li>
+        <ul>
+          <li>Koneksi lama terlalu lambat</li>
+          <li>Kamu berada di jaringan yang memblokir Tor</li>
+        </ul>
+        <li>Pada pengaturan, aktifkan:</li>
+        <ul>
+          <li>Select a built-in bridge</li>
+          <li>Pilij jenis: obfs4</li>
+        </ul>
+        <p>(Bridge ini menyamarkan koneksi Tor agar tidak terdeteksi ISP.)</p>
+        <li>Klik Connect.</li>
+        <li>Tunggu beberapa saat. Jika berhasil, Tor Browser akan terbuka.</li>
+        <p class="garisKiri">Catatan: <br> Hati-hati, karena CPU anda akan meledak sampai 1000% lebih <br> Kalau laptop dengan spesifikasi minimum, akan lebih parah lagi <br> ε=ε=ε=┏(゜ロ゜;)┛</p>
+      </ol>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>🔄️ Menjalankan Lagi di Lain Waktu:</h3>
+      <ol start="14">
+        <li>Buka terminal, navigasi ke folder, lalu jalankan:</li>
+        <p class="ulTidakAda terminal">./start-tor-browser.desktop</p>
+      </ol>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>✅ Catatan Tambahan:</h3>
+    </div>
+    <div class="teks">
+      <ul>
+        <li>Jangan jalankan sebagai root. Tor Browser akan menolak berjalan.</li>
+        <li>Jika kamu masih root, masuk sebagai user biasa atau buat user baru.</li>
+        <li>Jangan sembarangan edit script pengaman root check (meski bisa dilakukan, tidak disarankan untuk pemula karena berisiko).</li>
+        <li>Untuk keamanan maksimal, hindari add-ons, JavaScript, dan login akun pribadi saat memakai Tor. Kalian bisa atur di settings. Cari sendiri >:(</li>
+      </ul>
+    </div>
+
+    <div class="judulKecil bukanPertama">
+      <h3>🧅 Mencari Web Onion</h3>
+    </div>
+    <div class="teks">
+      <ul>
+        <li>Cari kata kunci “hidden wiki” dan temukan link .onion di sana.</li>
+        <li>Jangan beli jasa hacker, jangan beli jasa hitman, jangan beli barang curian, jangan beli identitas, jangan beli senjata api, jangan beli narkoba, jangan menonton video gore, dan jangan menonton video porn****fi a*** k****! 💢💢💢</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+      <div class="tulisanFooter">
+        <p>Created by  </p>
+        <h1>YUUBE12</h1>
+      </div>
+  </footer>
