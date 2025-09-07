@@ -1,0 +1,306 @@
+body {
+    background-color: #000000;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #c1c0c7;
+}
+
+
+/*Untuk banner besar*/
+.awalBesar {
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+    margin: 0px;
+    padding: 50px;
+    background: url("../img/hikari_nozomi_rl.jpg") no-repeat center/cover;
+    background-position: 50% 80%;
+    mask-image: linear-gradient(to top, transparent 0%, black 30%, black 100%);
+}
+
+.awalBesar img {
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+}
+
+.awalBesar .awalJudul h1 {
+    font-size: 150px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    -webkit-text-stroke: 2px rgb(244, 244, 244);    
+}
+
+
+/* Untuk tombol kembali dan home */
+.tombolKembali {
+    display: flex;
+    gap: 0px;
+}
+
+.tombolKembali p {
+    background-color: #000000;
+    color: #8b7c7c;
+    border: solid x rgb(235, 227, 242);
+    padding: 10px 20px;
+    border-radius: 1px;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+.tombolKembali .home {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/* Untuk judul besar */
+main .judulBesar {
+    background: rgba(255, 255, 255, 0.1);
+    color: #c1c0c7;
+    border: solid 2px rgb(235, 227, 242);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 40px 40px 20px 40px;
+}
+
+
+
+/* Untuk judul kecil */
+main .judulKecil {
+    color: #c1c0c7;
+    margin: 10px 50px 10px 50px;
+}
+main .bukanPertama {
+    color: #c1c0c7;
+    margin: 40px 50px 0px 50px;
+}
+
+
+/* Untuk materi */
+main .teks {
+    margin: 10px 50px 10px 50px;
+    line-height: 1.8
+}
+
+ul{
+    padding-left: 25px;
+}
+
+ol {
+    padding-left: 30px;
+}
+
+ul p, ol p {
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.garisKiri ul {
+    margin-top: -9px;
+}
+
+li {
+    padding-bottom: 5px;
+
+}
+
+ul .ulTidakAda {
+    list-style-type: none;
+    
+}
+
+
+
+
+
+.terminal {
+    background-color: #2e2e2e;
+    color: #c1c0c7;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 20px 10px 20px;
+}
+
+.garisKiri {
+    border-left: 2px solid #c1c0c7;
+    padding-left: 20px;
+    margin: 10px 0px 10px 0px;
+}
+
+
+/*Untuk kotak*/
+main .kotakMateri {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 10px 30px 40px 30px;
+}
+
+main .kotakMateri .materi {
+    color: #c1c0c7;
+    border: solid 2px rgb(235, 227, 242);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    flex: 0 0 calc(21%);
+    box-sizing: border-box;
+    transition: 
+        transform 0.25s ease-out, 
+        box-shadow 0.25s ease-out;
+    will-change: transform, box-shadow;
+}
+main .kotakMateri .materi ul {
+    padding-left: 15px;
+}
+
+.materi:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Gambar */
+.pengaturanVirtualMachine {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../img/computer1.jpg") no-repeat center center / cover; 
+}
+
+.materiLainnya {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../img/lainnya.jpg") no-repeat center center / cover; 
+}
+
+.darkweb {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../img/hack1.png") no-repeat center center / cover; 
+}
+    .darkweb:hover {
+        background: red;
+    }
+
+
+.networkPentesting {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../img/wifi1.png") no-repeat center center / cover; 
+}
+
+    .usbWifiAdapter {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../../img/usb.jpg") no-repeat center center / cover; 
+    }
+
+    .mengumpulkanInformasi {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../../img/buku.jpg") no-repeat center center / cover; 
+    }
+
+    .wirelessAttack {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../../img/wifi.jpg") no-repeat center center / cover; 
+    }
+
+    .postConnectionAttack {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("../../img/handphone.jpg") no-repeat center center / cover; 
+    }
+
+.tanpaGambar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/*footer*/
+.tulisanFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+
+
+
+
+/* Responsive untuk HP */
+@media (max-width: 600px) {
+    
+    /* Untuk banner besar */
+    .awalBesar img {
+        width: 100px;
+    }
+
+    .awalBesar .awalJudul h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .awalBesar {
+        gap: 16px;
+        padding: 40px 24px 20px 24px;
+    }
+
+
+    /* Untuk tombol kembali dan home */
+    .tombolKembali p {
+        height: 10px;
+        margin-bottom: -10px;
+    }
+
+    /* Untuk judul besar */
+    main .judulBesar {
+        font-size: 13px;
+        padding: 2px 16px;
+        margin: 25px 20px -20px 20px;
+    }
+
+
+    /* Untuk judul kecil */
+    main .judulKecil {
+        font-size: 15px;
+        margin: 30px 20px -10px 20px;
+    }
+    main .bukanPertama {
+        font-size: 15px;
+        margin: 25px 20px -10px 20px;
+    }
+
+    
+    /*untuk materi*/
+    main .teks {
+        margin: 0 20px 0 20px;
+        font-size: 14px
+    }
+
+    
+
+    ul, li, ol{
+        margin-bottom: auto;
+    }
+
+
+    /* Untuk kotak materi */
+    main .kotakMateri {
+        margin: 10px 15px 10px 15px;
+        
+    }
+
+    main .kotakMateri .materi {
+        flex: 0 0 45%;
+        margin: 10px;
+        padding-top: 0px;
+        
+    }
+
+    main .kotakMateri .materi h3, main .kotakMateri .materi p, main .kotakMateri .materi ul {
+        font-size: 14px;
+    }
+
+}
